@@ -1,0 +1,6 @@
+module.exports = {
+  MONGO_URI: 'mongodb+srv://kulachi:kulachi@cluster0.lexqx.mongodb.net/<dbname>?retryWrites=true&w=majority'
+}
+
+# Server.js
+const mongoURI = require(pathToConfig).MONGO_URI;

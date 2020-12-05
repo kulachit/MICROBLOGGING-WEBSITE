@@ -1,0 +1,99 @@
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { Card, Button, Form, Container, Row, Col } from "react-bootstrap";
+import Input from "../form/Input";
+import './sign_up.css'
+import g from '../images/g.png'
+import logo from '../images/logo.png'
+import pic from '../images/pic.png'
+
+const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
+   const { user_name, email, password, errors } = user;
+   return (
+   <div className="bodySU">
+    <div className="blockSU">
+      <div className="imageSU">
+          <img src={pic} alt="BIG OOF" className="sideImgSU"></img>
+          <div className="textSU">
+            <h3 className="customTextSU">Already have an account?</h3>
+            <h3 className="linkSU" onClick={onClick}> Sign in!</h3>
+          </div>
+      </div>
+      <div className="blockRightSU">
+        <img className="logoSU" src={logo} alt="BIG OOF"></img>
+        <h2 className="signinSU">Sign up</h2>
+        <form className="formStyleSU" onSubmit={onSubmit}>
+        <input
+                           name="user_name"
+                           type="text"
+                           placeholder="Enter Username"
+                           className="roundedSU"
+                           value={user_name}
+                           onChange={onChange}
+                           onBlur={onBlur}
+                           text={{
+                              module: "SignUp",
+                              label: "Username",
+                              error: errors.user_name
+                           }}
+                        />
+                        <input
+                           name="email"
+                           type="email"
+                           placeholder="Enter Email"
+                           className="roundedSU"
+                           value={email}
+                           onChange={onChange}
+                           onBlur={onBlur}
+                           text={{
+                              module: "SignUp",
+                              label: "Email",
+                              error: errors.email
+                           }}
+                        />
+                        <input
+                           name="password"
+                           type="password"
+                           placeholder="Enter Password"
+                           className="roundedSU"
+                           value={password}
+                           onBlur={onBlur}
+                           onChange={onChange}
+                           text={{
+                              module: "SignUp",
+                              label: "Password",
+                              error: errors.password
+                           }}
+                        />
+                        <button
+                           variant="info"
+                           type="submit"
+                           className="btnRoundedSU"
+                           disabled={loading}
+                        >
+                           Sign Up
+                        </button>
+        </form>
+          <div className="tickSU">
+            <input type="checkbox" name="remember"></input>
+            <label htmlFor ="remember" className="customTextSU"> Remember me </label>
+          </div>
+          <div className="orSU">
+            <h3 className="textOrSU">Or sign up with</h3>
+            <img src={g} className="googleImageSU" alt="BIGGEST OOF"></img>
+          </div>
+      </div>
+   </div> 
+</div>
+)
+}
+SignUp.propTypes = {
+   onSubmit: PropTypes.func.isRequired,
+   onChange: PropTypes.func.isRequired,
+   onBlur: PropTypes.func.isRequired,
+   user: PropTypes.object.isRequired,
+   loading: PropTypes.bool.isRequired
+};
+
+export default SignUp;
