@@ -61,6 +61,7 @@ const LoginPage = ({ loginUser, auth, errors, history, clearErrors }) => {
          message={message}
          loading={auth.userLoading}
          user={{ ...user }}
+         //onblur event occurs when an object loses focus
          onBlur={handleBlur}
          onChange={handleChange}
          onSubmit={handleSubmit}

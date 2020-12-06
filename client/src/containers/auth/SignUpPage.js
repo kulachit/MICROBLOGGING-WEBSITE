@@ -54,6 +54,7 @@ const SignUpPage = ({ history, registerUser, auth, errors, clearErrors }) => {
       <SignUp
          loading={auth.userLoading}
          user={{ ...user }}
+         //onblur event occurs when an object loses focus
          onBlur={handleBlur}
          onChange={handleChange}
          onSubmit={handleSubmit}

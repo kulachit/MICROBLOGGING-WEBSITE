@@ -14,7 +14,7 @@ import { setErrors } from "./errorActions";
 
 // User Login Action — It accepts userData as the parameter. 
 // We make an API call to the login endpoint sending the userData. 
-// If the authentication is successful we receive a jwt-token, 
+// If the authentication is successful we receive a jwt, 
 // we store it in a localStorage so that it stays there until we remove it (on user logout/token expires),
 // we set the authToken so that any further API request have the token in its header. 
 // Next, we decode the token and set the current user (id, username). 
