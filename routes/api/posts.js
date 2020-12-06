@@ -12,7 +12,7 @@ router.get(
    "/",
    passport.authenticate("jwt", { session: false }),
    (req, res) => {
-      Post.find({ author: req.user.user_name })
+      Post.find({ __v: req.user.__v })
          .then(posts => res.status(200).json(posts))
          .catch(err =>
             res
@@ -26,6 +26,13 @@ router.get("/post/:id", (req, res) => {
    Post.find({ _id: req.params.id })
       .then(post => res.status(200).json(post))
       .catch(err => res.status(400).json({ id: "Error fetching post by id" }));
+});
+
+
+router.get("/post", (req, res) => {
+   Post.find({ __v: req.params.__v })
+      .then(post => res.status(200).json(post))
+      .catch(err => res.status(400).json({ id: "Error fetching post" }));
 });
 
 router.get("/author/:author", (req, res) => {
