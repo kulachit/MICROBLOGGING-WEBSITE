@@ -25,7 +25,6 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
                            name="user_name"
                            type="text"
                            placeholder="Enter Username"
-                           className="roundedSU"
                            value={user_name}
                            onChange={onChange}
                            onBlur={onBlur}
@@ -39,7 +38,6 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
                            name="email"
                            type="email"
                            placeholder="Enter Email"
-                           className="roundedSU"
                            value={email}
                            onChange={onChange}
                            onBlur={onBlur}
@@ -53,7 +51,6 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
                            name="password"
                            type="password"
                            placeholder="Enter Password"
-                           className="roundedSU"
                            value={password}
                            onBlur={onBlur}
                            onChange={onChange}

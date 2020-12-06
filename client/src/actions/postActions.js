@@ -10,6 +10,20 @@ import {
    RESET_POST
 } from "./types";
 
+// Create Post — It accepts post data and history as parameter. 
+// We make an API call to create a new post. If the post is created we get the post response back. 
+// We then dispatch an action to add this post to the user’s current posts. 
+// After the post is created, the user is redirected to the dashboard.
+
+// Get Post — We have made three different API request for fetching the post.
+
+// getPosts() — This request is made for fetching posts when the user is logged in.
+
+// getPostsByAuthor() — This request is made for fetching all posts specific to the author when 
+// the user enters the url ‘hostname:port/blog/author_name’
+
+// getPostById() — This request is made for fetching the individual post.
+
 import { setErrors, clearErrors } from "./errorActions";
 
 export const createPost = (postData, history) => dispatch => {

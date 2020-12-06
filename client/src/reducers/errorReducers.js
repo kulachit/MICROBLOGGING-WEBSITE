@@ -1,5 +1,7 @@
 import { SET_ERRORS } from "../actions/types";
 
+// It returns the payload sent by the errorAction.
+
 const initialState = {};
 
 export default function(state = initialState, action) {
