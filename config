@@ -1,5 +1,5 @@
 module.exports = {
-  MONGO_URI: 'mongodb+srv://kulachi:kulachi@cluster0.lexqx.mongodb.net/<dbname>?retryWrites=true&w=majority'
+  MONGO_URI: 'mongodb+srv://kulachi:kulachi@cluster0.lexqx.mongodb.net/webapp?retryWrites=true&w=majority'
 }
 
 # Server.js
