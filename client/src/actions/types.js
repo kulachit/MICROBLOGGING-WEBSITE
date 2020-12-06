@@ -1,4 +1,9 @@
 // auth actions
+// We will use redux-thunk to create our authentication and post action creators
+// thunks enable us to avoid directly causing side effects in our actions,
+// action creators, or components. Instead, anything impure will be wrapped in a thunk. 
+// Later, that thunk will be invoked by middleware to actually cause the effect.
+
 export const SET_ERRORS = "SET_ERRORS";
 export const TOGGLE_USER_LOADING = "TOGGLE_LOADING";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
