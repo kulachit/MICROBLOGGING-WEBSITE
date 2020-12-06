@@ -1,3 +1,7 @@
+// SASS (Syntactically Awesome Stylesheets) is a CSS pre-processor 
+// that lets you use variables, mathematical operations, mixins, loops, functions, imports, 
+// and other interesting functionalities that make writing CSS much more powerful
+
 @import "./variables";
 
 @mixin transform($property) {

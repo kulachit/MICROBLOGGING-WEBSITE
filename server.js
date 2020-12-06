@@ -1,10 +1,10 @@
 const express = require("express");
 require("dotenv").config(); // for loading environment variables
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const passport = require("passport");
+const bodyParser = require("body-parser"); //You need to use bodyParser() if you want the form data to be available in req.body.
+const passport = require("passport"); //They are basically middleware functions that a request runs through before getting to the actual route.
 const path = require("path");
-const users = require("./routes/api/users");
+const users = require("./routes/api/users"); //Any route request starting with ‘/api/users/’ will be handled by the user router.
 
 const app = express();
 
