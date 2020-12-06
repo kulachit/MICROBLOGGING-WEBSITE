@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import Input from "../form/Input";
 import './sign_in.css';
-import g from '../images/g.png';
 import logo from '../images/logo.png';
 import pic from '../images/pic.png';
 
