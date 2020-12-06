@@ -20,7 +20,6 @@ const Navigationbar = ({ auth, onClick }) => (
                className="d-inline-block align-top"
                alt=""
             />
-            {" Bloggy "}
          </Navbar.Brand>
       </Link>
       <Nav className="ml-auto">

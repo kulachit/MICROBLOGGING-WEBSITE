@@ -1,10 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { Card, Button, Form, Container, Row, Col } from "react-bootstrap";
 import Input from "../form/Input";
 import './sign_up.css'
-import g from '../images/g.png'
 import logo from '../images/logo.png'
 import pic from '../images/pic.png'
 
