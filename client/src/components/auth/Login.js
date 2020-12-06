@@ -24,7 +24,7 @@ const Login = ({ message, loading, user, onChange, onBlur, onSubmit, onClick }) 
         <img className="logoSI" src={logo} alt="BIG OOF"></img>
         <h2 className="signinSI">Sign In</h2>
         <form className="formStyleSI" onSubmit={onSubmit}>
-        <input
+        <Input
                            name="email"
                            type="email"
                            placeholder="Enter Email"
@@ -38,7 +38,7 @@ const Login = ({ message, loading, user, onChange, onBlur, onSubmit, onClick }) 
                               error: errors.email
                            }}
                         />
-           <input
+           <Input
                            name="password"
                            type="password"
                            placeholder="Enter Password"
@@ -61,15 +61,6 @@ const Login = ({ message, loading, user, onChange, onBlur, onSubmit, onClick }) 
                            Sign In
                         </button>
         </form>
-          <div className="tickSI">
-            <input type="checkbox" name="remember"></input>
-            <label htmlFor ="remember" className="customTextSI"> Remember me </label>
-          </div>
-          <div className="orSI">
-            <h3 className="textOrSI">Or sign in with</h3>
-            <img src={g} className="googleImageSI" alt="BIGGEST OOF"></img>
-          </div>
-          <h3 className="linkPwdSI">Forgot password?</h3>
       </div>
     </div>
     </div>

@@ -24,7 +24,7 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
         <img className="logoSU" src={logo} alt="BIG OOF"></img>
         <h2 className="signinSU">Sign up</h2>
         <form className="formStyleSU" onSubmit={onSubmit}>
-        <input
+        <Input
                            name="user_name"
                            type="text"
                            placeholder="Enter Username"
@@ -38,7 +38,7 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
                               error: errors.user_name
                            }}
                         />
-                        <input
+                        <Input
                            name="email"
                            type="email"
                            placeholder="Enter Email"
@@ -52,7 +52,7 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
                               error: errors.email
                            }}
                         />
-                        <input
+                        <Input
                            name="password"
                            type="password"
                            placeholder="Enter Password"
@@ -75,14 +75,6 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit, onClick }) => {
                            Sign Up
                         </button>
         </form>
-          <div className="tickSU">
-            <input type="checkbox" name="remember"></input>
-            <label htmlFor ="remember" className="customTextSU"> Remember me </label>
-          </div>
-          <div className="orSU">
-            <h3 className="textOrSU">Or sign up with</h3>
-            <img src={g} className="googleImageSU" alt="BIGGEST OOF"></img>
-          </div>
       </div>
    </div> 
 </div>
