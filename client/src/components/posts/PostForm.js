@@ -8,6 +8,7 @@ const PostForm = ({ post, onChange, onBlur, loading, onSubmit }) => {
    const { title, body, errors } = post;
    return (
       <Container>
+         <h1>Post A New Message</h1>
          <Row>
             <Col className="mx-auto">
                <Form noValidate onSubmit={onSubmit} className="p-sm-3 p-xs-1">
