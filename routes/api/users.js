@@ -17,7 +17,7 @@ router.post("/signup", (req, res) => {
       return res.status(400).json(errors);
    }
    User.findOne({ $or: [{ email }, { user_name }] }).then(user => {
-      // search for if username or id already exist, if they do, throw correspondign error
+      // search for if username or id already exist, if they do, throw corresponding error
       if (user) {
          if (user.email === email)
             return res.status(400).json({ email: "Email already exists" });
